@@ -281,7 +281,7 @@ static srtp_err_status_t srtp_aes_gcm_mbedtls_set_aad(void *cv,
  */
 static srtp_err_status_t srtp_aes_gcm_mbedtls_encrypt(void *cv,
                                                       unsigned char *buf,
-                                                      unsigned int *enc_len)
+                                                      uint32_t *enc_len)
 {
     FUNC_ENTRY();
     srtp_aes_gcm_ctx_t *c = (srtp_aes_gcm_ctx_t *)cv;
@@ -337,7 +337,7 @@ static srtp_err_status_t srtp_aes_gcm_mbedtls_get_tag(void *cv,
  */
 static srtp_err_status_t srtp_aes_gcm_mbedtls_decrypt(void *cv,
                                                       unsigned char *buf,
-                                                      unsigned int *enc_len)
+                                                      uint32_t *enc_len)
 {
     FUNC_ENTRY();
     srtp_aes_gcm_ctx_t *c = (srtp_aes_gcm_ctx_t *)cv;

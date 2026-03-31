@@ -293,7 +293,7 @@ static srtp_err_status_t srtp_aes_gcm_openssl_set_aad(void *cv,
  */
 static srtp_err_status_t srtp_aes_gcm_openssl_encrypt(void *cv,
                                                       unsigned char *buf,
-                                                      unsigned int *enc_len)
+                                                      uint32_t *enc_len)
 {
     srtp_aes_gcm_ctx_t *c = (srtp_aes_gcm_ctx_t *)cv;
     if (c->dir != srtp_direction_encrypt && c->dir != srtp_direction_decrypt) {
@@ -354,7 +354,7 @@ static srtp_err_status_t srtp_aes_gcm_openssl_get_tag(void *cv,
  */
 static srtp_err_status_t srtp_aes_gcm_openssl_decrypt(void *cv,
                                                       unsigned char *buf,
-                                                      unsigned int *enc_len)
+                                                      uint32_t *enc_len)
 {
     srtp_aes_gcm_ctx_t *c = (srtp_aes_gcm_ctx_t *)cv;
     if (c->dir != srtp_direction_encrypt && c->dir != srtp_direction_decrypt) {

@@ -100,13 +100,13 @@ typedef srtp_err_status_t (*srtp_cipher_set_aad_func_t)(void *state,
 typedef srtp_err_status_t (*srtp_cipher_encrypt_func_t)(
     void *state,
     uint8_t *buffer,
-    unsigned int *octets_to_encrypt);
+    uint32_t *octets_to_encrypt);
 
 /* a srtp_cipher_decrypt_func_t decrypts data in-place */
 typedef srtp_err_status_t (*srtp_cipher_decrypt_func_t)(
     void *state,
     uint8_t *buffer,
-    unsigned int *octets_to_decrypt);
+    uint32_t *octets_to_decrypt);
 
 /*
  * a srtp_cipher_set_iv_func_t function sets the current initialization vector

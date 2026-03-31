@@ -279,7 +279,7 @@ static srtp_err_status_t srtp_aes_gcm_nss_set_aad(void *cv,
 static srtp_err_status_t srtp_aes_gcm_nss_do_crypto(void *cv,
                                                     int encrypt,
                                                     unsigned char *buf,
-                                                    unsigned int *enc_len)
+                                                    uint32_t *enc_len)
 {
     srtp_aes_gcm_ctx_t *c = (srtp_aes_gcm_ctx_t *)cv;
 
@@ -325,7 +325,7 @@ static srtp_err_status_t srtp_aes_gcm_nss_do_crypto(void *cv,
  */
 static srtp_err_status_t srtp_aes_gcm_nss_encrypt(void *cv,
                                                   unsigned char *buf,
-                                                  unsigned int *enc_len)
+                                                  uint32_t *enc_len)
 {
     srtp_aes_gcm_ctx_t *c = (srtp_aes_gcm_ctx_t *)cv;
 
@@ -384,7 +384,7 @@ static srtp_err_status_t srtp_aes_gcm_nss_get_tag(void *cv,
  */
 static srtp_err_status_t srtp_aes_gcm_nss_decrypt(void *cv,
                                                   unsigned char *buf,
-                                                  unsigned int *enc_len)
+                                                  uint32_t *enc_len)
 {
     srtp_err_status_t status = srtp_aes_gcm_nss_do_crypto(cv, 0, buf, enc_len);
     if (status != srtp_err_status_ok) {
